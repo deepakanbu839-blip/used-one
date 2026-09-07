@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aura Holidays - Curate your next luxury travel adventure. Interactive tour packages, travel cost calculator, and direct booking enquiries.">
+    <title>Aura Holidays | Curators of Luxury Travel Experiences</title>
+    
+    <!-- Link Stylesheet -->
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <!-- Ambient Glowing Blurs -->
+    <div class="ambient-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <!-- ==========================================================================
+         Header / Navigation
+         ========================================================================== -->
+    <header class="header">
+        <a href="#" class="logo" id="header-logo">
+            <svg class="logo-icon" viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+            </svg>
+            Aura <span>Holidays</span>
+        </a>
+        
+        <ul class="nav-menu">
+            <li><a href="#" class="nav-link">Home</a></li>
+            <li><a href="#destinations" class="nav-link">Destinations</a></li>
+            <li><a href="#packages" class="nav-link">Packages</a></li>
+            <li><a href="#calculator" class="nav-link">Calculator</a></li>
+            <li><a href="#testimonials" class="nav-link">Reviews</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+            <li><a href="#admin" class="nav-link" id="nav-admin-btn" style="color: var(--accent-color); font-weight: 700;">College Coordinator Login</a></li>
+        </ul>
+
+        <div class="nav-actions">
+            <!-- Theme Toggle -->
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
+                <!-- Moon Icon -->
+                <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+                <!-- Sun Icon -->
+                <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+            </button>
+
+            <!-- Mobile Menu Toggle Button -->
+            <div class="menu-toggle" id="menu-toggle">
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==========================================================================
+         Hero Section
+         ========================================================================== -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color: var(--primary-color);">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                </svg>
+                Voted Top Luxury Travel Agency 2026
+            </div>
+            
+            <h1 class="hero-title">Curating Your Next <br><span class="gradient-text">Unforgettable Odyssey</span></h1>
+            
+            <p class="hero-description">
+                Tailor-made itineraries, handpicked premium accommodations, and bespoke excursions crafted by expert travel designers.
+            </p>
+
+            <!-- Floating Search Widget -->
+            <div class="search-widget">
+                <div class="search-field">
+                    <label for="widget-destination">Destination</label>
+                    <input type="text" id="widget-destination" placeholder="Where to? (e.g. Alps, Bali)">
+                </div>
+                <div class="search-field">
+                    <label for="widget-search">Quick Search</label>
+                    <input type="text" id="widget-search" placeholder="Keywords...">
+                </div>
+                <div class="search-field">
+                    <label for="widget-duration">Max Duration</label>
+                    <select id="widget-duration">
+                        <option value="0">Any length</option>
+                        <option value="5">Up to 5 Days</option>
+                        <option value="7">Up to 7 Days</option>
+                        <option value="10">Up to 10 Days</option>
+                    </select>
+                </div>
+                <div class="search-field">
+                    <label>Departure Date</label>
+                    <input type="date" id="widget-date" value="2026-09-01">
+                </div>
+                <a href="#packages" class="btn btn-primary" style="height: 100%; border-radius: var(--border-radius-md);">
+                    Explore Trips
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         Popular Destinations
+         ========================================================================== -->
+    <section class="section" id="destinations">
+        <div class="section-header">
+            <h2>Trending <span class="gradient-text">Destinations</span></h2>
+            <p>Gather inspiration from global hot spots that our designers recommend right now.</p>
+        </div>
+
+        <div class="destinations-grid">
+            <!-- Card 1 -->
+            <div class="dest-card">
+                <img src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?auto=format&fit=crop&w=800&q=80" alt="Maldives Sanctuary" class="dest-img" loading="lazy">
+                <div class="dest-overlay">
+                    <span class="dest-tag">Tropical Resort</span>
+                    <h3>Maldives Archipelago</h3>
+                    <p class="dest-desc">Overwater Bungalows, coral reefs, and sunset private cruises.</p>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="dest-card">
+                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Swiss Alps Zermatt" class="dest-img" loading="lazy">
+                <div class="dest-overlay">
+                    <span class="dest-tag">Mountain Peak</span>
+                    <h3>Swiss Alps, Zermatt</h3>
+                    <p class="dest-desc">Luxury ski chalets, glacial lakes, and panoramic alpine trains.</p>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="dest-card">
+                <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=800&q=80" alt="Kyoto temples" class="dest-img" loading="lazy">
+                <div class="dest-overlay">
+                    <span class="dest-tag">Culture & Arts</span>
+                    <h3>Kyoto & Kyoto Imperial</h3>
+                    <p class="dest-desc">Ancient wooden shrines, geisha performance, and bamboo woods.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         Tour Packages with Filtering
+         ========================================================================== -->
+    <section class="section" id="packages" style="background-color: var(--bg-secondary);">
+        <div class="section-header">
+            <h2>Specialized <span class="gradient-text">Tour Packages</span></h2>
+            <p>Browse our hand-designed itineraries. Filter by category or customize budget range in real time.</p>
+        </div>
+
+        <div class="filter-controls">
+            <div class="filter-tabs">
+                <button class="filter-tab active" data-category="all">All Experiences</button>
+                <button class="filter-tab" data-category="beach">Tropical Beach</button>
+                <button class="filter-tab" data-category="mountain">Alpine Peaks</button>
+                <button class="filter-tab" data-category="cultural">Cultural Tours</button>
+                <button class="filter-tab" data-category="safari">Wild Safaris</button>
+            </div>
+            
+            <div class="filter-sliders">
+                <div class="slider-group">
+                    <label for="budget-range">Max Budget:</label>
+                    <input type="range" id="budget-range" min="1000" max="5000" step="100" value="5000">
+                    <span class="slider-value" id="budget-val">$5,000</span>
+                </div>
+                <div class="slider-group" style="padding-left: 10px;">
+                    <label for="hero-search">Search:</label>
+                    <input type="text" id="hero-search" placeholder="Type destination..." style="padding: 8px 15px; border-radius: var(--border-radius-sm); border: 1px solid var(--card-border); background: var(--bg-primary); color: var(--text-primary); outline: none;">
+                </div>
+            </div>
+        </div>
+
+        <!-- Render target -->
+        <div class="packages-grid"></div>
+    </section>
+
+    <!-- ==========================================================================
+         Interactive Trip Budget Calculator
+         ========================================================================== -->
+    <section class="section" id="calculator">
+        <div class="section-header">
+            <h2>Custom <span class="gradient-text">Budget Calculator</span></h2>
+            <p>Customize group size, travel durations, and accommodation level to see estimate prices immediately.</p>
+        </div>
+
+        <div class="calculator-container">
+            <div class="calculator-card">
+                <div class="calc-grid">
+                    <div class="calc-field calc-field-full">
+                        <label for="calc-package">Choose Base Package</label>
+                        <select id="calc-package">
+                            <!-- Populated dynamically via JS -->
+                        </select>
+                    </div>
+                    
+                    <div class="calc-field">
+                        <label for="calc-travelers">Number of Travelers</label>
+                        <input type="number" id="calc-travelers" min="1" max="20" value="2">
+                    </div>
+                    
+                    <div class="calc-field">
+                        <label for="calc-duration">Trip Duration (Days)</label>
+                        <input type="number" id="calc-duration" min="2" max="30" value="7">
+                    </div>
+
+                    <div class="calc-field calc-field-full">
+                        <label style="margin-bottom: 12px; display: block;">Tailor-Made Upgrades</label>
+                        <div class="calc-checkboxes">
+                            <label class="calc-checkbox">
+                                <input type="checkbox" id="calc-accommodation">
+                                5★ Luxury Villa Upgrade (+$120/person/night)
+                            </label>
+                            <label class="calc-checkbox">
+                                <input type="checkbox" id="calc-meals">
+                                Gourmet Dining Full Board (+$60/person/day)
+                            </label>
+                            <label class="calc-checkbox">
+                                <input type="checkbox" id="calc-guide">
+                                Private Chauffeur & Personal Tour Guide (+$150/day)
+                            </label>
+                            <label class="calc-checkbox">
+                                <input type="checkbox" id="calc-lounge">
+                                Airport VIP Suite Lounge Passes (+$45/person)
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="calculator-results">
+                <h3 style="font-size: 1.5rem; border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 15px;">Cost Breakdown</h3>
+                
+                <div class="result-item">
+                    <span>Base Package Cost</span>
+                    <span id="result-base-price">$0</span>
+                </div>
+                <div class="result-item">
+                    <span>Selected Add-ons</span>
+                    <span id="result-extras">$0</span>
+                </div>
+                <div class="result-item" style="color: var(--primary-color);">
+                    <span>Volume Group Discount</span>
+                    <span id="result-discount">$0</span>
+                </div>
+                
+                <div class="result-item result-total">
+                    <span>Estimated Total</span>
+                    <span id="result-total-price">$0</span>
+                </div>
+
+                <a href="#contact" class="btn btn-primary" style="margin-top: 15px;">
+                    Send Enquiry with Details
+                </a>
+                <p style="font-size: 0.8rem; color: rgba(255, 255, 255, 0.5); text-align: center;">
+                    *Prices are estimates based on season averages. Actual pricing will be confirmed by your agent.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         Testimonials Section
+         ========================================================================== -->
+    <section class="section" id="testimonials" style="background-color: var(--bg-secondary);">
+        <div class="section-header">
+            <h2>Traveler <span class="gradient-text">Experiences</span></h2>
+            <p>Hear from our clients who have travelled around the world with Aura Holidays.</p>
+        </div>
+
+        <div class="testimonials-slider-wrap">
+            <div class="testimonials-slider">
+                <!-- Populated dynamically via JS -->
+            </div>
+            
+            <div class="slider-dots">
+                <!-- Populated dynamically via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         Booking & Contact Enquiry
+         ========================================================================== -->
+    <section class="section" id="contact">
+        <div class="section-header">
+            <h2>Start Your <span class="gradient-text">Enquiry</span></h2>
+            <p>Our dedicated travel designers are ready to curate your ideal getaway. Send details and we will reply within 24 hours.</p>
+        </div>
+
+        <div class="contact-container">
+            <div class="contact-info">
+                <!-- Info 1 -->
+                <div class="info-card">
+                    <div class="info-icon">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                    </div>
+                    <div class="info-details">
+                        <h3>Private Hotlines</h3>
+                        <p>Call: +91 9025790483</p>
+                        <p>Support: +91 9025790483</p>
+                    </div>
+                </div>
+                <!-- Info 2 -->
+                <div class="info-card">
+                    <div class="info-icon">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                    </div>
+                    <div class="info-details">
+                        <h3>Consultation Desks</h3>
+                        <p>Owner: avinashavinash2904@gmail.com</p>
+                        <p>Support: vigneshvenkat1530@gmail.com</p>
+                    </div>
+                </div>
+                <!-- Info 3 -->
+                <div class="info-card">
+                    <div class="info-icon">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                    </div>
+                    <div class="info-details">
+                        <h3>Headquarters</h3>
+                        <p>Avinash M</p>
+                        <p>Rayanur Camp, Karur - 639003</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form-wrap">
+                <form id="booking-enquiry-form">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="form-name">Full Name *</label>
+                            <input type="text" id="form-name" required placeholder="e.g. Sarah Jenkins">
+                        </div>
+                        <div class="form-group">
+                            <label for="form-email">Email Address *</label>
+                            <input type="email" id="form-email" required placeholder="e.g. sarah@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="form-phone">Phone Number</label>
+                            <input type="tel" id="form-phone" placeholder="e.g. +1 (555) 019-2834">
+                        </div>
+                        <div class="form-group">
+                            <label for="form-date">Preferred Travel Month</label>
+                            <input type="month" id="form-date" value="2026-10">
+                        </div>
+                        <div class="form-group form-group-full">
+                            <label for="form-details">Bespoke Design Requests & Interests</label>
+                            <textarea id="form-details" placeholder="Describe your dream vacation details (e.g. dietary requirements, honeymoon surprises, interest in history/nature, etc.)"></textarea>
+                        </div>
+                        
+                        <div class="form-btn-wrap">
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">
+                                Submit Itinerary Request
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Modal Overlay -->
+    <div class="success-overlay">
+        <div class="success-card">
+            <div class="success-icon">✓</div>
+            <h3>Request Received!</h3>
+            <p>Your enquiry has been logged successfully. To dispatch the details directly to the owner, choose one of the options below:</p>
+            
+            <div style="display: flex; flex-direction: column; gap: 12px; margin: 25px 0 20px 0;">
+                <a id="success-email-btn" href="#" class="btn btn-primary" style="color: #050811; font-weight: 700; width: 100%;">
+                    ✉ Send Email to Owner
+                </a>
+                <a id="success-whatsapp-btn" href="#" target="_blank" class="btn btn-secondary" style="background: #25d366; color: white; border-color: transparent; font-weight: 700; width: 100%;">
+                    💬 Send WhatsApp to Owner
+                </a>
+            </div>
+            
+            <button class="btn btn-secondary" id="close-success-btn" style="width: 100%;">Back to Site</button>
+        </div>
+    </div>
+
+    <!-- ==========================================================================
+         Footer
+         ========================================================================== -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <a href="#" class="logo" style="margin-bottom: 20px;">
+                    <svg class="logo-icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                    </svg>
+                    Aura <span>Holidays</span>
+                </a>
+                <p class="footer-desc">Curating custom travel masterpieces for discerning global clients since 2018.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Twitter">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-col">
+                <h3>Our Hubs</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Karur Hub (HQ)</a></li>
+                    <li><a href="#">Rayanur Camp Office</a></li>
+                    <li><a href="#">Chennai Agency Desk</a></li>
+                    <li><a href="#">Coimbatore Studio</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Quick Nav</h3>
+                <ul class="footer-links">
+                    <li><a href="#destinations">Trending Locations</a></li>
+                    <li><a href="#packages">Special Packages</a></li>
+                    <li><a href="#calculator">Trip Calculator</a></li>
+                    <li><a href="#testimonials">Reviews Panel</a></li>
+                    <li><a href="#admin" id="footer-admin-btn">College Coordinator Login</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Exclusive Updates</h3>
+                <p class="footer-desc">Subscribe to receive seasonal custom itineraries and secret resort alerts.</p>
+                <form class="newsletter-form" onsubmit="event.preventDefault(); this.reset(); alert('Thank you for subscribing to Aura Updates!');">
+                    <div class="newsletter-input-wrap">
+                        <input type="email" required placeholder="Enter your email">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <span>&copy; 2026 Aura Holidays LLC. All rights reserved.</span>
+            <span>Terms of Service | Privacy Policy</span>
+        </div>
+    </footer>
+
+    <!-- ==========================================================================
+         Admin Portal Modal (Login + Dashboard)
+         ========================================================================== -->
+    <div class="admin-modal-overlay" id="admin-modal">
+        <!-- Close Button (Absolute position top-right of overlay) -->
+        <button class="admin-modal-close-btn" id="close-admin-modal-btn" aria-label="Close Admin Portal">&times;</button>
+        
+        <!-- View 1: Login Form -->
+        <div class="admin-card login-card" id="admin-login-view">
+            <div class="admin-card-header">
+                <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" stroke-width="2" class="gradient-icon" style="color: var(--accent-color); margin-bottom: 10px;">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                </svg>
+                <h2>Console <span class="gradient-text">Log In</span></h2>
+                <p>Select your role and enter access credentials</p>
+            </div>
+
+            <!-- Role Selector Segmented Controls -->
+            <div class="role-selector-tabs" style="display: flex; gap: 8px; margin-bottom: 22px; background: rgba(255, 255, 255, 0.03); padding: 5px; border-radius: var(--border-radius-md); border: 1px solid var(--card-border);">
+                <button type="button" class="role-tab active" data-role="coordinator" style="flex: 1; padding: 10px; border: none; background: var(--primary-color); color: #050811; font-weight: 700; cursor: pointer; border-radius: var(--border-radius-sm); transition: var(--transition-smooth);">Coordinator</button>
+                <button type="button" class="role-tab" data-role="admin" style="flex: 1; padding: 10px; border: none; background: transparent; color: var(--text-secondary); font-weight: 600; cursor: pointer; border-radius: var(--border-radius-sm); transition: var(--transition-smooth);">Administrator</button>
+            </div>
+            
+            <form id="admin-login-form">
+                <div class="form-group" style="margin-bottom: 20px;">
+                    <label for="admin-username">Username / Email</label>
+                    <input type="text" id="admin-username" required placeholder="e.g. admin or email" autocomplete="username">
+                </div>
+                <div class="form-group" style="margin-bottom: 20px;">
+                    <label for="admin-password">Password</label>
+                    <input type="password" id="admin-password" required placeholder="••••••••" autocomplete="current-password">
+                </div>
+
+                <!-- Captcha Verification Area -->
+                <div class="captcha-group" style="margin-bottom: 20px;">
+                    <label for="admin-captcha-input" style="font-size: 0.85rem; font-weight: 700; color: var(--text-secondary); display: block; margin-bottom: 8px;">Security Verification (Captcha)</label>
+                    <div style="display: flex; gap: 10px; align-items: center; margin-bottom: 10px;">
+                        <div id="captcha-visual-code" class="captcha-box" style="flex-grow: 1; height: 46px; background: rgba(0, 0, 0, 0.4); border: 1px solid var(--card-border); border-radius: var(--border-radius-sm); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; font-weight: 800; font-family: monospace; letter-spacing: 5px; color: var(--primary-color); user-select: none; position: relative; overflow: hidden; text-shadow: 0 0 10px var(--primary-glow);">
+                            <!-- Dynamic Code -->
+                            <div style="position: absolute; width: 120%; height: 2px; background: var(--accent-color); transform: rotate(-10deg); opacity: 0.4;"></div>
+                            <div style="position: absolute; width: 120%; height: 2px; background: var(--secondary-color); transform: rotate(10deg); opacity: 0.4;"></div>
+                        </div>
+                        <button type="button" id="refresh-captcha-btn" style="width: 46px; height: 46px; border-radius: var(--border-radius-sm); border: 1px solid var(--card-border); background: var(--card-bg); color: var(--text-primary); cursor: pointer; display: flex; align-items: center; justify-content: center; transition: var(--transition-smooth);" aria-label="Refresh Captcha">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <input type="text" id="admin-captcha-input" required placeholder="Enter captcha characters" style="width: 100%; padding: 12px 20px; border-radius: var(--border-radius-sm); border: 1px solid var(--card-border); background: rgba(255, 255, 255, 0.03); color: var(--text-primary); outline: none;">
+                </div>
+
+                <div id="login-error-msg" style="color: #ff4a5a; font-size: 0.85rem; font-weight: 600; text-align: center; margin-bottom: 15px; display: none;">
+                    Invalid Username, Password, or Captcha check failed.
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Access Console</button>
+
+                <div style="text-align: center; margin-top: 20px;">
+                    <a href="#" id="toggle-register-btn" style="color: var(--primary-color); font-size: 0.9rem; font-weight: 600;">Register Coordinator Account</a>
+                </div>
+            </form>
+        </div>
+
+        <!-- View 1.5: Register Form -->
+        <div class="admin-card login-card" id="admin-register-view" style="display: none; max-width: 500px;">
+            <div class="admin-card-header">
+                <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" stroke-width="2" class="gradient-icon" style="color: var(--primary-color); margin-bottom: 10px;">
+                    <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="8.5" cy="7" r="4"></circle>
+                    <line x1="20" y1="8" x2="20" y2="14"></line>
+                    <line x1="23" y1="11" x2="17" y2="11"></line>
+                </svg>
+                <h2>Coordinator <span class="gradient-text">Register</span></h2>
+                <p>Create your profile details and bio-data</p>
+            </div>
+            
+            <form id="admin-register-form">
+                <div class="form-group" style="margin-bottom: 15px;">
+                    <label for="reg-name">Full Name *</label>
+                    <input type="text" id="reg-name" required placeholder="e.g. Dr. Rajesh Kumar">
+                </div>
+                <div class="form-group" style="margin-bottom: 15px;">
+                    <label for="reg-email">Email Address (Username) *</label>
+                    <input type="email" id="reg-email" required placeholder="e.g. rajesh@college.edu">
+                </div>
+                <div class="form-group" style="margin-bottom: 15px;">
+                    <label for="reg-password">Password *</label>
+                    <input type="password" id="reg-password" required placeholder="Min 6 characters">
+                </div>
+                <div class="form-group" style="margin-bottom: 20px;">
+                    <label for="reg-bio">Coordinator Bio-Data *</label>
+                    <textarea id="reg-bio" required placeholder="Enter details about your college department, coordinator role, or achievements..." style="resize: none; height: 100px;"></textarea>
+                </div>
+                <div id="register-error-msg" style="color: #ff4a5a; font-size: 0.85rem; font-weight: 600; text-align: center; margin-bottom: 15px; display: none;">
+                    An account with this email already exists.
+                </div>
+                <div id="register-success-msg" style="color: var(--success); font-size: 0.85rem; font-weight: 600; text-align: center; margin-bottom: 15px; display: none;">
+                    Registration successful! Redirecting to login...
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Create Account</button>
+                
+                <div style="text-align: center; margin-top: 20px;">
+                    <a href="#" id="toggle-login-btn" style="color: var(--text-secondary); font-size: 0.9rem; font-weight: 600;">Back to Login</a>
+                </div>
+            </form>
+        </div>
+
+        <!-- View 2: Leads Dashboard Panel -->
+        <div class="admin-card dashboard-card" id="admin-dashboard-view" style="display: none;">
+            <div class="dashboard-header-wrap">
+                <div>
+                    <h2 id="dashboard-main-title">Aura Console | <span class="gradient-text">Leads Manager</span></h2>
+                    <p>Live Client Enquiries & Calculations Log</p>
+                </div>
+                <div style="display: flex; gap: 15px;">
+                    <button class="btn btn-secondary" id="export-csv-btn" style="padding: 10px 18px; font-size: 0.85rem;">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 6px; vertical-align: middle; display: inline-block;">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                        Export CSV
+                    </button>
+                    <button class="btn btn-primary" id="admin-logout-btn" style="padding: 10px 18px; font-size: 0.85rem; background: linear-gradient(135deg, #ff4a5a, #ff6b6b); color: white;">
+                        Log Out
+                    </button>
+                </div>
+            </div>
+
+            <!-- Coordinator Profile Info Box -->
+            <div id="dashboard-profile-box" class="info-card" style="margin-bottom: 30px; display: none; background: rgba(0, 242, 254, 0.03); border-color: rgba(0, 242, 254, 0.15); align-items: center; gap: 20px; padding: 25px;">
+                <div class="info-icon" style="background: rgba(0, 242, 254, 0.1); border-color: rgba(0, 242, 254, 0.2);">
+                    <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--primary-color);">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                </div>
+                <div class="info-details" style="flex-grow: 1;">
+                    <h3 id="profile-name" style="font-size: 1.3rem; margin-bottom: 4px; font-family: var(--font-heading);">Coordinator Name</h3>
+                    <p id="profile-email" style="font-size: 0.85rem; color: var(--primary-color); margin-bottom: 10px;">coordinator@college.edu</p>
+                    <p id="profile-bio" style="font-style: italic; font-size: 0.9rem; border-left: 3px solid var(--accent-color); padding-left: 15px; color: var(--text-secondary); line-height: 1.5;">
+                        Bio Data details...
+                    </p>
+                </div>
+            </div>
+
+            <!-- Stats Overview Cards -->
+            <div class="dashboard-stats">
+                <div class="stat-box">
+                    <span class="stat-title">Total Enquiries</span>
+                    <span class="stat-num" id="stat-total-leads">0</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-title">Active Leads</span>
+                    <span class="stat-num" id="stat-active-leads" style="color: var(--primary-color);">0</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-title">Est. Revenue Pool</span>
+                    <span class="stat-num" id="stat-revenue" style="color: var(--accent-color);">$0</span>
+                </div>
+            </div>
+
+            <!-- Search & Controls -->
+            <div style="margin-bottom: 20px; display: flex; gap: 20px; align-items: center;">
+                <input type="text" id="dashboard-search" placeholder="Filter by client name, email, or package..." style="flex-grow: 1; padding: 12px 20px; border-radius: var(--border-radius-md); border: 1px solid var(--card-border); background: rgba(255, 255, 255, 0.03); color: var(--text-primary); outline: none;">
+                <button class="btn btn-secondary" id="clear-leads-btn" style="padding: 10px 18px; font-size: 0.85rem; border-color: rgba(255, 74, 90, 0.3); color: #ff6b6b;">
+                    Clear All Logs
+                </button>
+            </div>
+
+            <!-- Leads Data Table -->
+            <div class="table-container">
+                <table class="leads-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Client Info</th>
+                            <th>Package Selected</th>
+                            <th>Details Summary</th>
+                            <th>Est. Price</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="leads-table-body">
+                        <!-- Populated dynamically via JS -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Link Script -->
+    <script src="index.js"></script>
+</body>
+</html>
